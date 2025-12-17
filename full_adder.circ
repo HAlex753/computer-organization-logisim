@@ -18,7 +18,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <main name="half_adder"/>
+  <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -51,47 +51,6 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="half_adder">
-    <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="half_adder"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(300,340)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A"/>
-    </comp>
-    <comp lib="0" loc="(300,370)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B"/>
-    </comp>
-    <comp lib="0" loc="(540,430)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C_out"/>
-      <a name="type" val="output"/>
-    </comp>
-    <comp lib="0" loc="(560,330)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="S"/>
-      <a name="type" val="output"/>
-    </comp>
-    <comp lib="1" loc="(490,430)" name="AND Gate"/>
-    <comp lib="1" loc="(500,320)" name="XOR Gate"/>
-    <wire from="(300,300)" to="(300,340)"/>
-    <wire from="(300,300)" to="(420,300)"/>
-    <wire from="(300,370)" to="(410,370)"/>
-    <wire from="(410,370)" to="(410,450)"/>
-    <wire from="(410,370)" to="(440,370)"/>
-    <wire from="(410,450)" to="(440,450)"/>
-    <wire from="(420,300)" to="(420,410)"/>
-    <wire from="(420,300)" to="(440,300)"/>
-    <wire from="(420,410)" to="(440,410)"/>
-    <wire from="(440,340)" to="(440,370)"/>
-    <wire from="(490,430)" to="(540,430)"/>
-    <wire from="(500,320)" to="(500,330)"/>
-    <wire from="(500,330)" to="(560,330)"/>
-  </circuit>
   <circuit name="main">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="main"/>
@@ -101,46 +60,55 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A"/>
     </comp>
-    <comp lib="0" loc="(210,440)" name="Pin">
+    <comp lib="0" loc="(210,450)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B"/>
     </comp>
-    <comp lib="0" loc="(210,470)" name="Pin">
+    <comp lib="0" loc="(210,490)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="C_in"/>
     </comp>
-    <comp lib="0" loc="(790,540)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C_out"/>
-      <a name="type" val="output"/>
-    </comp>
-    <comp lib="0" loc="(800,440)" name="Pin">
+    <comp lib="0" loc="(790,450)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S"/>
       <a name="type" val="output"/>
     </comp>
-    <comp lib="1" loc="(730,530)" name="OR Gate"/>
-    <comp loc="(550,410)" name="half_adder"/>
-    <comp loc="(550,490)" name="half_adder"/>
-    <wire from="(210,410)" to="(330,410)"/>
-    <wire from="(210,440)" to="(250,440)"/>
-    <wire from="(210,470)" to="(210,510)"/>
-    <wire from="(210,510)" to="(330,510)"/>
-    <wire from="(250,440)" to="(250,490)"/>
-    <wire from="(250,490)" to="(330,490)"/>
-    <wire from="(330,430)" to="(330,470)"/>
-    <wire from="(330,470)" to="(550,470)"/>
-    <wire from="(550,410)" to="(800,410)"/>
-    <wire from="(550,430)" to="(680,430)"/>
-    <wire from="(550,470)" to="(550,490)"/>
-    <wire from="(550,510)" to="(560,510)"/>
-    <wire from="(560,510)" to="(560,550)"/>
-    <wire from="(560,550)" to="(680,550)"/>
-    <wire from="(680,430)" to="(680,510)"/>
-    <wire from="(730,530)" to="(730,540)"/>
-    <wire from="(730,540)" to="(790,540)"/>
-    <wire from="(800,410)" to="(800,440)"/>
+    <comp lib="0" loc="(790,550)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="C_out"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(400,430)" name="XOR Gate"/>
+    <comp lib="1" loc="(490,450)" name="XOR Gate"/>
+    <comp lib="1" loc="(490,510)" name="AND Gate"/>
+    <comp lib="1" loc="(490,590)" name="AND Gate"/>
+    <comp lib="1" loc="(740,550)" name="OR Gate"/>
+    <wire from="(210,410)" to="(260,410)"/>
+    <wire from="(210,450)" to="(250,450)"/>
+    <wire from="(210,490)" to="(210,530)"/>
+    <wire from="(210,530)" to="(350,530)"/>
+    <wire from="(250,450)" to="(250,610)"/>
+    <wire from="(250,450)" to="(340,450)"/>
+    <wire from="(250,610)" to="(440,610)"/>
+    <wire from="(260,410)" to="(260,570)"/>
+    <wire from="(260,410)" to="(340,410)"/>
+    <wire from="(260,570)" to="(440,570)"/>
+    <wire from="(350,470)" to="(350,530)"/>
+    <wire from="(350,470)" to="(430,470)"/>
+    <wire from="(350,530)" to="(440,530)"/>
+    <wire from="(400,430)" to="(410,430)"/>
+    <wire from="(410,430)" to="(410,490)"/>
+    <wire from="(410,430)" to="(430,430)"/>
+    <wire from="(410,490)" to="(440,490)"/>
+    <wire from="(490,450)" to="(790,450)"/>
+    <wire from="(490,510)" to="(510,510)"/>
+    <wire from="(490,590)" to="(510,590)"/>
+    <wire from="(510,510)" to="(510,530)"/>
+    <wire from="(510,530)" to="(690,530)"/>
+    <wire from="(510,570)" to="(510,590)"/>
+    <wire from="(510,570)" to="(690,570)"/>
+    <wire from="(740,550)" to="(790,550)"/>
   </circuit>
 </project>
